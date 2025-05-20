@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AUREX CORE – Cyber Intelligence</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', monospace;
+      background-color: #0d1117;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #161b22;
+      padding: 20px 40px;
+      border-bottom: 1px solid #2f363e;
+      box-shadow: 0 0 10px #00f7ff40;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav a {
+      color: #00f7ff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 8px #00f7ff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 120px 20px 80px;
+      background: linear-gradient(to right, #0d1117, #1f1f1f);
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      color: #00f7ff;
+      text-shadow: 0 0 10px #00f7ff;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #a0a0a0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 80px 40px;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 30px;
+      border-left: 5px solid #00f7ff;
+      padding-left: 15px;
+      text-shadow: 0 0 8px #00f7ff60;
+    }
+
+    .feature-advanced {
+      background-color: #10151c;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid #2e3540;
+      box-shadow: 0 0 15px #00f7ff20;
+      margin-bottom: 40px;
+      opacity: 0;
+      transform: translateX(-80px);
+      transition: all 1s ease;
+    }
+
+    .feature-advanced.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .feature-advanced h3 {
+      color: #00f7ff;
+      margin-bottom: 10px;
+      text-shadow: 0 0 5px #00f7ff;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      background-color: #0f131a;
+      border: 1px solid #2e3540;
+      padding: 12px;
+      color: white;
+      border-radius: 5px;
+      font-family: monospace;
+    }
+
+    .contact-form button {
+      background-color: #00f7ff;
+      border: none;
+      padding: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #00f7ff50;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #161b22;
+      color: #777;
+      border-top: 1px solid #2e3540;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="2D568C1D-0ECB-4BF0-AF67-D7FCD6AF286F.png" alt="Aurex Core Logo">
+    <nav>
+      <a href="#mission">Misión</a>
+      <a href="#services">Servicios</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>AUREX CORE</h1>
+    <p>Precisión quirúrgica en detección de vulnerabilidades. Nuestra fuerza: lo que otros no pueden ver.</p>
+  </div>
+
+  <section id="mission">
+    <h2 class="section-title">Misión Estratégica</h2>
+    <p>
+      Detectar, anticipar y resolver vulnerabilidades críticas antes de que se conviertan en amenazas reales.
+      AUREX CORE es un núcleo de inteligencia activa, impulsado por análisis profundo, lógica simbólica y visión operativa.
+    </p>
+  </section>
+
+  <section id="services">
+    <h2 class="section-title">Servicios Avanzados</h2>
+
+    <div class="feature-advanced">
+      <h3>Scan Neural</h3>
+      <p>Auditoría en tiempo real basada en patrones adaptativos que detectan vectores de ataque ocultos en sistemas dinámicos.</p>
+    </div>
+
+    <div class="feature-advanced">
+      <h3>Trace Report</h3>
+      <p>Generación de informes cifrados, con visualización técnica e interpretativa lista para ejecutivos y equipos de seguridad.</p>
+    </div>
+
+    <div class="feature-advanced">
+      <h3>Core Simulation</h3>
+      <p>Simulaciones controladas de ataques éticos en infraestructura sensible, orientadas a descubrir errores lógicos y físicos no previstos.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contacto Directo</h2>
+    <form class="contact-form" onsubmit="sendMessage(); return false;">
+      <input type="text" id="name" placeholder="Tu nombre" required>
+      <input type="email" id="email" placeholder="Tu correo" required>
+      <textarea id="message" rows="5" placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 AUREX CORE. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    function sendMessage() {
+      const name = document.getElementById("name").value;
+      alert(`Gracias, ${name}. Tu mensaje fue recibido.`);
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('section').forEach(section => observer.observe(section));
+    document.querySelectorAll('.feature-advanced').forEach(item => observer.observe(item));
+  </script>
+</body>
+</html>
